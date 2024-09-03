@@ -1,0 +1,54 @@
+<section id="products" class="main-slider">
+    <div class="container">
+        <div class="section-heading">
+                <img src="{{ module.section_icon.url }}" alt="{{ module.section_icon.alt }}">
+                <h3>{{ module.section_heading_text }}</h3>
+        </div>
+        <div class="main-content">
+            
+            <div class="swiper product-slider">
+                <div class="swiper-wrapper">
+                    {% for slideItem in module.slides %}
+                    <div class="swiper-slide slide">
+                        <div class="info-name-wrap">
+                            
+                            <div class="slide-name">
+                                <p class="small-slide-name font-roboto">{{ slideItem.title_small }}</p>
+                                <p class="big-slide-name font-roboto">{{ slideItem.title_big }}</p>
+                                <div class="line"></div>
+                            </div>
+                            <div class="info-wrap">
+                                <p class="name font-roboto">{{ slideItem.info_heading }}</p>
+                                <div class="description font-ubuntu">{{ slideItem.info_description }}</div>
+                                <a class="font-roboto" href="{{ slideItem.info_link.url }}">{{ slideItem.info_link.title }}</a>
+                            </div>
+                        </div>
+                        <div class="img-wrap">
+                            <img src="{{ slideItem.slide_image.url }}" alt="{{ slideItem.slide_image.alt }}">
+                        </div>
+                        <div class="slide-name-mobile">
+                            <p class="small-slide-name font-roboto">{{ slideItem.title_small }}</p>
+                            <p class="big-slide-name font-roboto">{{ slideItem.title_big }}</p>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    {% endfor %}  
+
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="buttons-wrap">
+                    <div class="swiper-button-prev"><img src="{{ module.arrow_icon.url }}" alt="{{ module.arrow_icon.alt }}"></div>
+                    <div class="swiper-button-next"><img src="{{ module.arrow_icon.url }}" alt="{{ module.arrow_icon.alt }}"></div>
+
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="background-image-div">
+        <img src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+    </div>
+    </div>
+    
+    
+</section>

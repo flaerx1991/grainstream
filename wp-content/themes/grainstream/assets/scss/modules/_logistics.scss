@@ -1,0 +1,40 @@
+.logistics{
+    background-color: $white;
+    padding: 28px 0;
+    @media (min-width: $mediaTabletMax) {
+        padding-top: 96px;
+        padding-bottom: 70px;
+        background-color: $gray5;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1060px;
+        padding: 0 16px;
+        
+        @media (min-width: $mediaTabletMax) {
+            padding: 0;
+            display: block;
+        }
+
+        .logistics-info{
+            text-align: justify;
+            width: 100%;
+            max-width: 764px;
+            margin: 0 auto;
+            margin-top: 27px;
+            @media (min-width: $mediaTabletMax) {
+                margin-top: 56px;
+                margin-bottom: 70px;
+            }
+        }
+        
+        .img-col{
+            grid-row: 2;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

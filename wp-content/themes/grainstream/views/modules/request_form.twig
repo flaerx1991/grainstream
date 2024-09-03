@@ -1,0 +1,20 @@
+<section class="request-form" id="request-form">
+    <div class="container">
+        <div class="container-content grid">
+            <div class="img-col">
+                <img src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+            </div>
+
+            <div class="text-col">
+                <p class="text-small font-roboto">{{ module.title_main }}</p>
+                <h3>{{ module.title_secondary }}</h3>
+                <img class="" src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+                <div class="text-info font-ubuntu"> {{ module.description }} </div>
+                <div class="form-col">
+                    {{ function('do_shortcode', '[contact-form-7 id="323" title="Do Request"]') }}
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</section>

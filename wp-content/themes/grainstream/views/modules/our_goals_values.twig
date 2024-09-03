@@ -1,0 +1,25 @@
+<section class="our-goals-values" id="goals-values">
+    <div class="container">
+
+        <div class="section-heading">
+            <img src="{{ module.section_icon.url }}" alt="{{ module.section_icon.alt }}">
+            <h3>{{ module.section_heading_text }}</h3>
+        </div>
+
+        <div class="raising-cards">
+            {% for item in module.cards_elements %}
+                <div class="raising-card-item">
+                    <div class="img-col"><img src="{{ item.card_image.url }}" alt="{{ item.card_image.alt }}"></div>
+
+                    <div class="raising-card-info">
+                        <div class="goals-logo flex"><img src="{{ item.card_info_icon.url }}" alt="{{ item.card_info_icon.alt }}"></div>
+                        <p class="name-of-card font-roboto">{{ item.card_title }}</p>
+                        <div class="add-info">
+                            {{ item.card_info_text }}
+                        </div>
+                    </div>
+                </div>
+           {% endfor %}  
+        </div>
+    </div>
+</section>

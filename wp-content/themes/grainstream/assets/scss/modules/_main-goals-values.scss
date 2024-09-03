@@ -1,0 +1,148 @@
+.main-goals-values {
+    padding-top: 20px;
+    padding-bottom: 71px;
+    overflow: hidden;
+    background-color: $white;
+    @media (min-width: $mediaTabletMax) {
+        background-color: $gray;
+    }
+    .container {
+
+        width: 100%;
+        max-width: $mediaDesktopFHD;
+        margin: 0 auto;
+        
+        @media (min-width: $mediaTabletMax) {
+            padding: 0 16px;
+        }
+        @media (min-width: $mediaDesktopMid) {
+            padding: 0 rem-calc(78px);
+        }
+        .main-goals-values-content {
+            .img-col{
+                width: 100%;
+                aspect-ratio: 3/1;
+                padding: 0 6px;
+                border-radius: 13px;
+                object-fit: cover;
+            }
+            .goals-values-tabs{
+                margin-top: 82px;
+                row-gap: 55px;
+                padding: 0 16px;
+                @media (min-width: $mediaTabletMax) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                    column-gap: 52px;
+                    
+                }
+
+                @media (min-width: $mediaDesktopMid) {
+                    padding: 0;
+                }
+
+                .goals-card-info {
+                    width: 100%;
+                    background: $white;
+                    box-shadow: 0px 10px 4px rgba(0, 0, 0, 0.1);
+                    border-radius: 10px;
+                    padding: 30px 14px;
+                    position: relative;
+                    box-sizing: border-box;
+                    min-height: 187px;
+                    position: relative;
+                    @media (min-width: $mediaTabletMin) {
+                        padding: 32px 20px 20px 20px;
+                        min-height: unset;
+                    }
+                
+                    @media (min-width: $mediaTabletMax) {
+                        padding: 86px 44px 43px 44px;
+                        min-height: 303px;
+                    }
+                
+                    .name-of-card {
+                        font-weight: 400;
+                        font-size: 18px;
+                        // line-height: 30px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $black;
+                        position: relative;
+                        width: fit-content;
+                        margin: 0 auto;
+                        margin-bottom: 15px;
+                        @media (min-width: $mediaTabletMin) {
+                            font-size: 20px;
+                            line-height: unset;
+                            margin-bottom: 15px;
+                        }
+                
+                        @media (min-width: $mediaTabletMax) {
+                            font-size: 28px;
+                            // margin-bottom: 30px;
+                        }
+                    }
+                    
+                    .card-logo{
+                      
+                       img{
+                        width: 100%
+                       }
+
+                    }
+                    .add-info {
+                        ul{
+                            list-style: disc;
+                            padding-left: 20px;
+                            li{
+                                font-family: 'Ubuntu';
+                                // font-weight: bold;
+                                font-size: 16px;
+                                line-height: 25px;
+                                color: $black;
+                                @media (min-width: $mediaTabletMax) {
+                                    font-size: 18px;
+                                }
+                                &::marker{
+                                    color: $gold;
+                                }
+                            }
+                        }
+                    }
+
+                    .know-more-link{
+                        text-decoration: none;
+                        background-color: $black;
+                        transition: .3s all;
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        color: $white;
+                        max-width: 120px;
+                        height: 30px;
+                        border-radius: 5px;
+                        width: 100%;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        bottom: -15px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        @media (min-width: $mediaTabletMax) {
+                            max-width: 192px;
+                            height: 50px;
+                            font-size: 24px;
+                            bottom: -23px;
+                        }
+                        &:hover{
+                            
+                            transition: .3s all;
+                            background-color: $gold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

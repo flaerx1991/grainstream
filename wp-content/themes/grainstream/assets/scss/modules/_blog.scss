@@ -1,0 +1,149 @@
+.blog-content{
+    .container{
+        .heading-block{
+            height: 566px;
+            position: relative;
+           
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: rgba(26, 23, 27, 0.35);
+                inset: 0;
+                z-index: 1;
+            }
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+            .text-col{
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                max-width: 1140px;
+                margin: 0 auto;
+                height: 100%;
+                display: grid;
+                align-content: end;
+                grid-auto-rows: min-content;
+                gap: rem-calc(35px);
+                align-content: center;
+                padding: 0 36px;
+                @media (min-width: $mediaTabletMax) {
+                    padding: 0 16px;
+                }
+                
+                @media (min-width: $mediaDesktopMid) {
+                    padding: 0;
+                }
+                h2{
+                    color: $white;
+                    font-size: 60px;
+                    text-transform: uppercase;
+                    // top: 50%;
+                    z-index: 2;
+                }
+            }
+           
+        }
+        
+        .posts {
+                
+            width: 100%;
+            max-width: 1006px;
+            column-gap: 41px;
+            row-gap: 60px;
+            margin: 0 auto;
+            padding: 0 16px;
+            padding: 100px 16px 100px;
+            @media (min-width: $mediaTabletMin) {
+                grid-template-columns: 1fr 1fr;
+                
+            }
+            @media (min-width: $mediaTabletMax) {
+                padding: 100px 10px 100px;
+                grid-template-columns: 1fr 1fr 1fr;
+                // padding-top: 100px;
+
+            }
+            .news-col {
+                
+              
+
+                // @media (min-width: $mediaTabletMax) {
+                //     display: grid;
+                //     // flex-direction: column;
+                // }
+
+                .img-col {
+
+                    img {
+                        width: 100%;
+                        // height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                        aspect-ratio: 1.16666667/1;
+                    }
+                }
+
+                .news-content {
+                    position: relative;
+                    padding: 46px 27px 27px;
+                    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.07);
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background-color: $white;
+                    .news-logo {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        top: 0;
+                        left: 20px;
+                        background: $gold;
+                        width: 48px;
+                        height: 48px;
+                        transform: translate(0, -50%);
+                        border-radius: 50%;
+                        padding: 8px;
+                    }
+                    .post-title{
+                        margin: 0 auto;
+                        display: block;
+                        width: fit-content;
+                        font-size: 28px;
+                        margin-bottom: 20px;
+                    }
+                    .post-preview {
+                        @media (min-width: $mediaTabletMax) {
+                            min-height: 150px;
+                        }
+
+                    }
+
+                    .post-link {
+                        text-decoration: none;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        column-gap: 9px;
+                        margin-top: 40px;
+
+                        img{
+                            width: 9px;
+                            filter: invert(98%) sepia(56%) saturate(1439%) hue-rotate(315deg) brightness(86%) contrast(83%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

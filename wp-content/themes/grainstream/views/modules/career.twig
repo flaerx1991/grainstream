@@ -1,0 +1,53 @@
+<section class="career" id="career">
+    <div class="container">
+        <div class="section-heading">
+            <img src="{{ module.section_icon.url }}" alt="{{ module.section_icon.alt }}">
+            <h3>{{ module.section_heading_text }}</h3>
+        </div>
+
+        <div class="container-content grid">
+            <div class="career-vacancy-content grid">
+                {% for car_item in module.vacancy_offers %}
+                    <div class="vacancy-card-item">
+                        <div class="vacancy-card-info">
+                            <div class="card-logo"><img src="{{ car_item.icon.url }}" alt="{{ car_item.icon.alt }}"></div>
+                            <p class="name-of-card font-roboto">{{ car_item.name }}</p>
+                            <div class="add-info">
+                                {{ car_item.info }}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="vacancy-form">
+                <div class="card-logo">
+                    <img src="{{ module.vacancy_form_icon.url }}" alt="{{ module.vacancy_form_icon.alt }}">
+                </div>
+                <div class="vacancy-form-content grid">
+                    <div class="img-col">
+                        <img src="{{ module.vacancy_form_image.url }}" alt="{{ module.vacancy_form_image.alt }}">
+                    </div>
+                    <div class="form-col">
+                        <p class="form-title font-roboto">
+                            {{ module.title_main }}
+                        </p>
+                        
+                        <img src="{{ module.vacancy_form_image.url }}" alt="{{ module.vacancy_form_image.alt }}">
+
+                        <div class="form-info font-ubuntu">
+                            {{ module.description }}
+                        </div>
+
+                        <div class="form-col">
+                            {{ function('do_shortcode', '[contact-form-7 id="326" title="Vacancy"]') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="vacancy-back-image">
+            <img src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+        </div>
+    </div>
+</section>

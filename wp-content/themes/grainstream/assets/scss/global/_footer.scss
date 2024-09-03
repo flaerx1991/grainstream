@@ -1,0 +1,142 @@
+footer{
+
+    .container{
+        padding-top: 60px;
+        padding-bottom: 20px;
+        position: relative;
+        background-color: $gray3;
+        overflow: hidden;
+        .footer-content{
+            width: 100%;
+            max-width: 1140px;
+            grid-template-columns: 1fr 0.5fr;
+            grid-template-rows: 1fr 0.1fr;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            row-gap: 25px;
+            padding: 0 16px;
+            @media (min-width: $mediaTabletMax) {
+                row-gap: 156px;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media (min-width: $mediaDesktopMid) {
+                padding: 0;
+            }
+            .contacts-col{
+                flex-direction: column;
+                row-gap: 15px;
+                grid-row: 1;
+                grid-column: 1/-1;
+                @media (min-width: $mediaTabletMax) {
+                    grid-row: unset;
+                    grid-column: unset;
+                }
+                .contact-item{
+                    max-width: 230px;
+                    
+                    @media (min-width: $mediaTabletMin) {
+                        max-width: unset;
+                    }
+                    p{
+                        font-size: 16px;  
+                        text-transform: uppercase;
+                    }
+
+                    a{
+                        font-size: 19px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        @media (min-width: $mediaTabletMin) {
+                            font-size: 24px;
+
+                        }
+
+                    }
+                }
+            }
+
+            .logo-col{
+                margin: 0 auto;
+                // display: none;
+                grid-column: 2;
+                grid-row: 1;
+                align-self: baseline;
+                @media (min-width: $mediaTabletMax) {
+                    grid-column: unset;
+                    grid-row: unset;
+                    align-self: unset;
+                }
+                img{
+                    width: 100%;
+                    @media (min-width: $mediaTabletMax) {
+                        width: unset;
+                    }
+                }
+            }
+
+            .footer-menu-col{
+               
+                display: none;
+                @media (min-width: $mediaTabletMax) {
+                    flex-direction: column;
+                    align-items: flex-end;
+                    display: flex;
+                }
+                .footer-menu-item{
+                    a{
+                        font-size: 24px;
+                        line-height: 40px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .credentials-col{
+                grid-row: 2;
+                grid-column: 1/-1;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+                a{
+                    text-decoration: none;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+                .divider{
+                    background-color: #a9a9aa;
+                    width: 85px;
+                    margin: 10px auto;
+                    height: 1px;
+                    border-radius: 5px;
+                }
+                p{
+                    font-size: 12px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .back-image{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            width: 100%;
+            img{
+                width: 100%;
+                aspect-ratio: 1.2/1;
+                object-fit: cover;
+                @media (min-width: $mediaTabletMax) {
+                    aspect-ratio: unset;
+                    object-fit: unset;
+                }
+            }
+        }
+    }
+
+    
+}

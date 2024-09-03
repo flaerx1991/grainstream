@@ -1,0 +1,367 @@
+.our-goals-values {
+   
+    // padding-top: 50px;
+    padding-bottom: 90px;
+    overflow: hidden;
+    .container {
+        
+        width: 100%;
+        max-width: $mediaDesktopFHD;
+        margin: 0 auto;
+        padding: 0 16px;
+       
+        @media (min-width: $mediaDesktopMid) {
+            padding: 0 rem-calc(150px);
+        }
+
+       
+        .raising-cards {
+            width: 100%;
+            display: grid;
+            row-gap: 40px;
+            @media (min-width: $mediaTabletMin) {
+                
+                gap: 40px;
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (min-width: $mediaTabletMax) {
+                grid-template-columns: unset;
+                padding: 0;
+                row-gap: 60px;
+                
+            }
+
+            @media (min-width: $mediaDesktopMid) {
+                // padding: 0 124px;
+            }
+
+            .raising-card-item {
+                display: grid;
+                grid-template-rows: 44% 56%;
+                @media (min-width: $mediaTabletMax) {
+                    margin-bottom: 21px;
+                    grid-template-rows: unset;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    margin-bottom: unset;
+                    column-gap: 77px;
+                    position: relative;
+                    align-items: center;
+
+                    &:nth-of-type(even) {
+                        .img-col {
+                            grid-column: 2;
+                            grid-row: 1;
+                            @media (min-width: $mediaTabletMax) {
+                                right: -131%;
+                            }
+                            
+                            @media (min-width: $mediaDesktopFHD) {
+                                right: -165%;
+                            }
+                        }
+
+                        .production-card-info {
+                            grid-column: 1;
+                            grid-row: 1;
+                        }
+
+                        .raising-card-info {
+                            
+                            @media (min-width: $mediaTabletMax) {
+                                left: -131%;
+                            }
+                            @media (min-width: $mediaDesktopFHD) {
+                                left: -165%;
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(odd) {
+                        .img-col {
+                            @media (min-width: $mediaTabletMax) {
+                                left: -131%;
+                            }
+                            @media (min-width: $mediaDesktopFHD) {
+                                left: -165%;
+                            }
+                        }
+
+                        .raising-card-info {
+                            
+                            @media (min-width: $mediaTabletMax) {
+                                right: -131%;
+                            }
+
+                            @media (min-width: $mediaDesktopFHD) {
+                                right: -165%;
+                            }
+                        }
+                    }
+
+                }
+                @media (min-width: $mediaDesktopMid) {
+                    column-gap: 77px;
+                }
+
+                .img-col {
+                    width: 100%;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;                    
+                    position: relative;
+                    
+                    @media (min-width: $mediaTabletMin) {
+                        margin-bottom: unset;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        aspect-ratio: 1.48571429/1;
+                        object-fit: cover;
+                    }
+                }
+
+                .raising-card-info {
+                    width: 100%;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;                    
+                    padding: 18px 10px;
+                    position: relative;
+                    box-sizing: border-box;
+                    background-color: $white;
+                    min-height: 230px;
+                    @media (min-width: $mediaTabletMin) {
+                    }
+
+                    @media (min-width: $mediaTabletMax) {
+                        min-height: unset;
+                        padding: 20px 0px 20px 0px;
+                        background: transparent;
+                    }
+
+                    .goals-logo {
+                        margin: 0 auto;
+                        margin-bottom: 12px;
+                        width: 40px;
+                        height: 40px;
+
+                        @media (min-width: $mediaTabletMin) {
+                             
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            width: unset;
+                            height: unset;
+                            margin: unset;
+                            justify-content: center;
+                            margin-bottom: 20px ;
+                        }
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            @media (min-width: $mediaTabletMax) {
+                                width: unset;
+                                height: unset;
+                            }
+                        }
+                    }
+
+                    .name-of-card {
+                        font-weight: 400;
+                        font-size: 17px;
+                        line-height: 25px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: $black;
+                        position: relative;
+                        width: fit-content;
+                        margin: 0 auto;
+                        margin-bottom: 15px;
+
+                        @media (min-width: $mediaTabletMin) {
+                            font-size: 20px;
+                            line-height: unset;
+                            margin-bottom: 30px;
+                        }
+
+                        @media (min-width: $mediaTabletMax) {
+                            font-size: 28px;
+                            margin-bottom: 22px;
+                        }
+                    }
+
+                    .add-info {
+                        margin: unset;
+                        p {
+                            font-weight: 300;
+                            font-size: 10px;
+                            line-height: 16px;
+                            text-align: justify;
+                            color: $black;
+
+                            @media (min-width: $mediaTabletMin) {
+                                font-size: 12px;
+                                line-height: 20px;
+
+                            }
+
+                            @media (min-width: $mediaTabletMax) {
+                                font-size: 18px;
+                                line-height: 26px;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            
+            .animate {
+
+                .img-col {
+                    animation: showImgCard 1s ease forwards 1;
+                    @media (min-width: $mediaTabletMax) {
+                        @keyframes showImgCard {
+                            0% {
+                                opacity: 0;
+                                left: -131%;
+                            }
+    
+                            100% {
+                                opacity: 1;
+                                left: 0;
+                            }
+                        }
+                    }
+                    
+
+                    @media (min-width: $mediaDesktopFHD) {
+                        
+                        @keyframes showImgCard {
+                            0% {
+                                opacity: 0;
+                                left: -165%;
+                            }
+
+                            100% {
+                                opacity: 1;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+
+                .raising-card-info {
+                    animation: showInfoCard 1s ease forwards 1;
+
+                    @media (min-width: $mediaTabletMax) {
+                        @keyframes showInfoCard {
+                            0% {
+                                opacity: 0;
+                                right: -131%;
+                            }
+    
+                            100% {
+                                opacity: 1;
+                                right: 0;
+                            }
+                        }
+                    }
+                   
+
+                    @media (min-width: $mediaDesktopFHD) {
+                        @keyframes showInfoCard {
+                            0% {
+                                opacity: 0;
+                                right: -165%;
+                            }
+    
+                            100% {
+                                opacity: 1;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .animate2 {
+
+                .img-col {
+                    animation: showImgCard1 1s ease forwards 1;
+                    @media (min-width: $mediaTabletMax) {
+                        @keyframes showImgCard1 {
+                            0% {
+                                opacity: 0;
+                                right: -131%;
+                            }
+    
+                            100% {
+                                opacity: 1;
+                                right: 0;
+                            }
+                        }
+                    }
+                    
+
+                    @media (min-width: $mediaDesktopFHD) {
+                        
+
+                        @keyframes showImgCard1 {
+                            0% {
+                                opacity: 0;
+                                right: -165%;
+                            }
+    
+                            100% {
+                                opacity: 1;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+
+                .raising-card-info {
+                    animation: showInfoCard1 1s ease forwards 1;
+                    @media (min-width: $mediaTabletMax) {
+                        @keyframes showInfoCard1 {
+
+                            0% {
+                                left: -131%;
+                            }
+    
+                            100% {
+                                left: 0;
+                            }
+                        }
+                    }
+                    
+
+                    @media (min-width: $mediaDesktopFHD) {
+                        
+                        @keyframes showInfoCard1 {
+                            0% {
+                                opacity: 0;
+                                left: -165%;
+                            }
+
+                            100% {
+                                opacity: 1;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            
+            
+        }
+    }
+}

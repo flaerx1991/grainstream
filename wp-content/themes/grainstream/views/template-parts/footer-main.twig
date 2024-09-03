@@ -1,0 +1,53 @@
+<footer>
+    <div class="container">
+        <div class="footer-content grid">
+
+            <div class="contacts-col flex">
+                {% for contact in options.footer_contacts %}
+                    <div class="contact-item">
+                        <p class="font-roboto">{{ contact.contact_text_heading }}</p>
+                        <a class="font-roboto" href="{{ contact.contact_link.url }}">{{ contact.contact_link.title }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+
+            <div class="logo-col">
+                <img src="{{ options.footer_logo.url }}" alt="{{ options.footer_logo.url }}">
+            </div>
+
+            <ul class="footer-menu-col menu-ul flex">
+                {% for menu_item in options.footer_menu %}
+                    <li class="footer-menu-item">
+                        <a href="{{ menu_item.footer_link.url }}" class="">{{ menu_item.footer_link.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <div class="credentials-col flex">
+                <a href="{{ options.privacy_policy.url }}" target="_blank"  class="font-roboto"> {{ options.privacy_policy.title }} </a>
+                <div class="divider"></div>
+                <p class="font-roboto">{{ options.credentials_text }}</p>
+            </div>
+        </div>
+
+        <div class="back-image">
+            <img src="{{ options.footer_background.url }}" alt="{{ options.footer_background.alt }}">
+        </div>
+    </div>
+    
+   
+    
+</footer>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed&family=Ubuntu&display=swap" >
+
+
+{# <link rel="stylesheet" id="swiper-css" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css?ver=6.3" type="text/css" media="all">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js?ver=6.3" id="swiper-js"></script> #}
+
+{# <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> #}

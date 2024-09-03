@@ -1,0 +1,25 @@
+<section class="main-goals-values" id="our-goals-values">
+    <div class="container">
+
+        <div class="section-heading">
+            <img src="{{ module.section_icon.url }}" alt="{{ module.section_icon.alt }}">
+            <h3>{{ module.section_heading_text }}</h3>
+        </div>
+
+        <div class="main-goals-values-content">
+            <img class="img-col" src="{{ module.image.url }}" alt="{{ module.image.alt }}">
+            <div class="goals-values-tabs grid">
+                {% for itemV in module.goals_and_values_tabs %}
+                    <div class="goals-card-info">
+                        <div class="card-logo"><img src="{{ itemV.tab_icon.url }}" alt="{{ itemV.tab_icon.alt }}"></div>
+                        <p class="name-of-card font-roboto">{{ itemV.tab_title }}</p>
+                        <div class="add-info">
+                            {{ itemV.tab_info }}
+                        </div>
+                        <a href="{{ module.more_link.url }}" class="know-more-link font-roboto"> <p>{{ module.more_link.title }}</p> </a>
+                    </div> 
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

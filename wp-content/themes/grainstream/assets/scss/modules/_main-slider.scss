@@ -1,0 +1,555 @@
+.main-slider{
+    background-color: $white;
+    @media (min-width: $mediaTabletMax) {
+        background-color: $gray5;
+
+    }
+
+    height: 100%;
+    padding-top: 60px;
+    .container {
+       width: 100%;
+       max-width: 1920px;
+       margin: 0 auto;
+       position: relative;
+        .main-content{
+            overflow: hidden;
+            // padding: 0 10px;
+            padding-bottom: 100px;
+            @media (min-width: $mediaTabletMax) {
+                padding: 0 58px;
+            }
+
+            .swiper{
+                
+                @media (min-width: $mediaTabletMax) {
+                    overflow: visible;
+                }
+            }
+    
+            .product-slider {
+                position: relative;
+                width: 100%;
+                height: max-content;
+                margin: 0;
+                
+                @media (min-width: $mediaTabletMax) {
+                    display: grid;
+                    padding-top: 103px;
+                    grid-template-columns: 97% 4%;
+                
+                    grid-template-rows: 1fr 0.69fr;
+                }
+                @media (min-width: $mediaDesktopMid) {
+                    padding-top: 47px;
+                }
+
+                .swiper-slide {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white;
+                    width: 100%;
+                    overflow: visible;
+                }
+    
+                .swiper-pagination {
+                    position: absolute;
+                    bottom: 14px;
+                    display: flex;
+                    justify-content: center;
+                    box-sizing: border-box;
+                    width: fit-content;
+                    bottom: 150px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    
+                    @media (min-width: $mediaTabletMin) {
+                        // height: 53px;
+                        bottom: 150px;
+                        // top: 50%;
+                        // left: 50%;
+                        // transform: translate(26%, 0);
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        top: 57.5%;
+                        bottom: 0%;
+                        transform: translate(34%, 0);
+                        padding: 14px 0;
+
+                    }
+                    @media (min-width: $mediaDesktopMid) {
+                        top: 54.5%;
+                        transform: translate(26%, 0);
+                    }
+                    .swiper-pagination-bullet {
+                        opacity: unset;
+                        width: unset;
+                        height: unset;
+                        border-radius: unset;
+                        background: unset;
+                        display: block;
+    
+                    }
+    
+                    .pagination-item {
+                        margin: 0 4px;
+                        background: transparent;
+                        width: 10.5px;
+                        height: 10.5px;
+                        transition: all 0.3s;
+                        border: 1px solid $gold;
+                        border-radius: 10px;
+                        z-index: 3;
+                        box-sizing: unset;
+                        
+                        @media (min-width: $mediaTabletMin) {
+                            width: 9px;
+                            height: 9px;
+                            // border: 1px solid $black;
+                            margin: 0 7.5px;
+                        }
+    
+                        @media (min-width: $mediaTabletMax) {
+                            width: 13px;
+                            height: 13px;
+                            border: 2px solid $black;
+                            margin: 0 14px;
+                        }
+    
+                        .line-item {
+                            position: relative;
+                            width: 0;
+                            top: 1.15px;
+                            height: 0.39px;
+                            background: $black;
+                            display: none;
+                            @media (min-width: $mediaTabletMin) {
+                               
+                                height: 1px;
+                                top: 4px;
+                            }
+    
+                            @media (min-width: $mediaTabletMax) {
+                                height: 2px;
+                                top: 6px;
+                                right: -24px;
+                                display: block;
+                            }
+                        }
+                    }
+    
+                    .swiper-pagination-bullet-active {
+                        background: $gold;
+                        // margin-right: 33px;
+                        transition: 0.3s;
+    
+                        @media (min-width: $mediaTabletMin) {
+                            // margin-right: unset;
+                        }
+    
+                        @media (min-width: $mediaTabletMax) {
+                            margin-right: 56px;
+                            background: $black;
+
+                        }
+    
+                        .item-info {
+                            animation-name: fadeSlideinfo;
+                            animation-duration: 0.2s;
+                            animation-fill-mode: both;
+    
+                            @keyframes fadeSlideinfo {
+                                from {
+                                    opacity: 0;
+                                    transform: translate3d(0, 100%, 0);
+                                }
+    
+                                to {
+                                    opacity: 1;
+                                    transform: translate3d(0, 0%, 0);
+                                }
+                            }
+                        }
+    
+                        .line-item {
+                            animation-name: addLineToDot;
+                            animation-duration: 0.2s;
+                            animation-fill-mode: both;
+    
+                            @media (max-width: $mediaTabletMin - 1) {
+                                @keyframes addLineToDot {
+                                    from {
+                                        opacity: 0;
+                                        width: 0px;
+                                    }
+    
+                                    to {
+                                        opacity: 1;
+                                        width: 39px;
+                                    }
+                                }
+                            }
+    
+                            @media (min-width: $mediaTabletMin) {
+                                @keyframes addLineToDot {
+                                    from {
+                                        opacity: 0;
+                                        width: 0px;
+                                    }
+    
+                                    to {
+                                        opacity: 1;
+                                        width: 106px;
+                                    }
+                                }
+                            }
+    
+                            @media (min-width: $mediaTabletMax) {
+                                @keyframes addLineToDot {
+                                    from {
+                                        opacity: 0;
+                                        width: 0px;
+                                    }
+    
+                                    to {
+                                        opacity: 1;
+                                        width: 53px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+    
+                .buttons-wrap {
+                    // display: none;
+                    margin: 0;
+                    display: flex;
+                    flex-shrink: 0;
+
+                    width: 100%;
+                    position: absolute;
+                    top: 40%;
+                    justify-content: space-between;
+                    transform: translateY(-50%);
+                    z-index: 1;
+                    padding: 0 3px;
+                    @media (min-width: $mediaTabletMax) {
+                        justify-content: flex-end;
+                        width: unset;
+                        position: relative;
+                        top: unset;
+                        justify-content: unset;
+                        transform: unset;
+                        z-index: unset;
+                    }
+
+                    .swiper-button-next{
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        margin-top: 0;
+                        flex-shrink: 0;
+                        position: relative;
+                        border: 1px solid $gold;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #f9f9fb;
+                        padding: 5px;
+                        img{
+                            filter: invert(98%) sepia(56%) saturate(1439%) hue-rotate(315deg) brightness(86%) contrast(83%);
+                            width: 100%;
+                            @media (min-width: $mediaTabletMax) {
+                                filter: unset;
+                                width: unset;
+                            }
+                        }
+                        @media (min-width: $mediaTabletMax) {
+                            top: 48.3%;
+                            right: 0;
+                            left: 0; 
+                            width: 47px;
+                            height: 47px;
+                            border: 1px solid $black;
+
+                        }
+                        &::after{
+                            content: '';
+                        }
+                    }
+
+                    .swiper-button-prev{
+                        position: relative;
+                        top: 0;
+                        margin-top: 0;
+                        right: 0;
+                        left: 0;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: #f9f9fb;
+                        border: 1px solid $gold;
+                        padding: 5px;
+                        img{
+                            filter: invert(98%) sepia(56%) saturate(1439%) hue-rotate(315deg) brightness(86%) contrast(83%);
+                            transform: rotate(180deg);
+                            width: 100%;
+                        }
+                        &::after{
+                            content: '';
+                        }
+                        @media (min-width: $mediaTabletMax) {
+                            display: none;
+                        }
+                    }
+                   
+                }
+    
+                .swiper-wrapper{
+                    padding-bottom: 67px;
+                    @media (min-width: $mediaTabletMax) {
+                        padding-bottom: 0;
+                    }
+                }
+                .slide {
+                    display: flex;
+                    // flex-wrap: wrap;
+                    transition: 1s;
+                    flex-direction: column-reverse;
+                    padding: 0 10px;
+                    @media (min-width: $mediaTabletMin) {
+                       
+                        width: 47.5%;
+                        background-color: $white;
+                    }
+                    @media (min-width: $mediaTabletMax) {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        background-color: transparent;
+                        padding: 0;
+                    }
+
+                    .img-wrap {
+                        justify-self: flex-start;
+                        position: relative;
+                        @media (min-width: $mediaTabletMin) {
+                            width: 100%;
+                        }
+                        @media (min-width: $mediaTabletMax) {
+                            width: 39%;
+                        }
+                        img {
+                            display: block;
+                            transition: 1s;
+                            width: 100%;
+                            object-fit: cover;
+                            aspect-ratio: 1.29310345/1;
+                            border-radius: 5px 5px 0 0;
+                            @media (min-width: $mediaTabletMax) {
+                                border-radius: 5px;
+                                aspect-ratio: 0.919928826/1;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+    
+                    .info-name-wrap{
+                        display: flex;
+                        flex-direction: column;
+                        position: relative;
+                        justify-content: center;
+                        height: 100%;
+                        width: 100%;
+                        @media (min-width: $mediaTabletMax) {
+                            width: unset;
+                        }
+                        .slide-name{
+                            display: none;
+                            opacity: 0;
+                            // top: -1.3em;
+                            left: -55px;
+                            flex-direction: column;
+                            position: absolute;
+                            @media (min-width: $mediaTabletMax) {
+                                top: -5.3em;
+                                display: flex;
+                            }
+                            @media (min-width: $mediaDesktopMid) {
+                                top: -1.3em;
+                            }
+                            .small-slide-name{
+                                font-size: 18px;
+                                color: $black;
+                                text-transform: uppercase;
+                            }
+        
+                            .big-slide-name{
+                                font-size: 64px;
+                                color: $black;
+                                text-transform: uppercase;
+                            }
+        
+                            .line{
+                                margin-top: 13px;
+                                width: 602px;
+                                height: 3px;
+                                background-color: $black;
+                            }
+                        }
+                        .info-wrap{
+                            width: 100%;
+                            max-width: unset;
+                            display: flex;
+                            align-self: center;
+                            justify-content: center;
+                            min-height: 118px;
+                            opacity: 1;
+                            transition: 1s;
+                            
+                            text-align: center;
+                            padding-top: 50px;
+                            box-sizing: border-box;
+                            background-color: $gray4;
+                            margin-right: 0;
+                            z-index: 1;
+                            // padding: 0 20px;
+                            border-radius: 5px;
+                            position: relative;
+                          
+
+                            @media (min-width: $mediaTabletMin) {
+                                
+                                text-align: left;
+                            }
+                            @media (min-width: $mediaTabletMax) {
+                                padding: 39px 28px 24px 34px;
+                                background-color: $white;
+                                max-width: 549px;
+                                margin-right: -36px;
+                                min-height: 290px;
+                                display: unset;
+                                opacity: 0;
+
+                            }
+                            @media (min-width: $mediaDesktopMid) {
+                                min-height: 356px;
+                            }
+                            .name{
+                                font-size: 18px;
+                                line-height: 25px;
+                                font-weight: 400;
+                                color: $black;
+                                text-transform: uppercase;
+                                @media (min-width: $mediaTabletMax) {
+                                    margin-bottom: 10px;
+                                    font-size: 28px;
+                                }
+                            }
+        
+                            .description{
+                                color: $black;
+                                font-size: 18px;
+                                line-height: 25px;
+                                text-align: justify;
+                                display: none;
+                                @media (min-width: $mediaTabletMax) {
+                                    display: block;
+                                }
+                            }
+                            a{
+                                display: block;
+                                text-decoration: none;
+                                padding: 6.5px 69px;
+                                background-color: $black;
+                                width: max-content;
+                                border-radius: 5px;
+                                margin: 0 auto;
+                                // pointer-events: none;
+                                color: $white;
+                                font-size: 24px;
+                                text-transform: uppercase;
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                bottom: -25px;
+                                @media (min-width: $mediaTabletMax) {
+
+                                }
+
+                            }
+                        }
+                    }
+
+                    .slide-name-mobile{
+                        width: 100%;
+                        background-color: $white;
+                        padding-bottom: 16px;
+                        @media (min-width: $mediaTabletMax) {
+                            display: none;
+                        }
+                        .small-slide-name{
+                            font-size: 18px;
+                            color: $black;
+                            text-transform: uppercase;
+                        }
+    
+                        .big-slide-name{
+                            font-size: 28px;
+                            color: $black;
+                            text-transform: uppercase;
+                        }
+    
+                        .line{
+                            margin-top: 13px;
+                            width: 95px;
+                            height: 1px;
+                            background-color: $black;
+                        }
+                    }
+                  
+                }
+                .swiper-slide-active{
+                    .info-name-wrap{
+                        .slide-name{
+                            opacity: 1;
+                            transition: .3s all;
+                            
+                        }
+                        .info-wrap{
+                            
+                            @media (min-width: $mediaTabletMax) {
+                                opacity: 1;
+                            }
+                            a{
+                                pointer-events: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .background-image-div{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 0 10px;
+            mix-blend-mode: luminosity;
+            @media (min-width: $mediaTabletMax) {
+                padding: 0 58px;
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+} 
